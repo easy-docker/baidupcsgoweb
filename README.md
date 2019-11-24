@@ -3,14 +3,13 @@
 # 使用方法
 ```
 docker pull ghostry/baidupcsgoweb
-docker container stop baidupcsgoweb
-docker container rm baidupcsgoweb
+docker stop baidupcsgoweb
+docker rm baidupcsgoweb
 docker run -d \
     --name baidupcsgoweb \
-    --user $(id -u):$(id -g) \
     -p 5299:5299 \
-    -v ~/.baidupcsgoweb:/home/user/.config/BaiduPCS-Go/ \
-    -v ~/Downloads:/home/user/Downloads \
+    -v ~/.baidupcsgoweb:/root/.config/BaiduPCS-Go/ \
+    -v ~/Downloads:/root/Downloads \
     --restart always \
     ghostry/baidupcsgoweb
 ```

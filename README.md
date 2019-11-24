@@ -1,5 +1,5 @@
 # docker-baidupcsgoweb
-即装即用的baidupcsgoweb
+即装即用的 [BaiduPCS-Web](https://github.com/liuzhuoling2011/baidupcs-web)
 # 使用方法
 ```
 docker pull ghostry/baidupcsgoweb

@@ -9,7 +9,8 @@ RUN cd / && \
     rm pcs.zip
 
 RUN adduser -D -h /home -s /bin/sh -u 1000 user && \
-    chmod 777 /home
+    chmod 777 /home && \
+    chmod 777 /root
 
 WORKDIR /home
 

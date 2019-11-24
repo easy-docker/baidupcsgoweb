@@ -8,12 +8,10 @@ RUN cd / && \
     rmdir BaiduPCS-Go-3.6.8-linux-amd64/ && \
     rm pcs.zip
 
-RUN adduser -D -h /home -s /bin/sh -u 1000 user && \
-    chmod 777 /home && \
-    chmod 777 /root
+RUN adduser -D -s /bin/sh -u 1000 user
 
-WORKDIR /home
+WORKDIR /home/user
 
-VOLUME ["/home/.config/BaiduPCS-Go","/home/Downloads"]
+VOLUME ["/home/user/.config/BaiduPCS-Go","/home/user/Downloads"]
 
 CMD ["/BaiduPCS-Go"]

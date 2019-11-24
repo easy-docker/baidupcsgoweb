@@ -9,8 +9,8 @@ docker run -d \
     --name baidupcsgoweb \
     --user $(id -u):$(id -g) \
     -p 5299:5299 \
-    -v ~/.baidupcsgoweb:/home/.config/BaiduPCS-Go/ \
-    -v ~/Downloads:/home/Downloads \
+    -v ~/.baidupcsgoweb:/home/user/.config/BaiduPCS-Go/ \
+    -v ~/Downloads:/home/user/Downloads \
     --restart always \
     ghostry/baidupcsgoweb
 ```

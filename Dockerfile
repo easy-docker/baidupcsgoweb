@@ -2,10 +2,10 @@ FROM alpine
 MAINTAINER Ghostry (ghostry@ghostry.cn)
 
 RUN cd / && \
-    wget -O pcs.zip https://github.com/liuzhuoling2011/baidupcs-web/releases/download/3.6.8/BaiduPCS-Go-3.6.8-linux-amd64.zip && \
+    wget -O pcs.zip https://github.com/liuzhuoling2011/baidupcs-web/releases/download/3.7.0/BaiduPCS-Go-3.7.0-linux-amd64.zip && \
     unzip pcs.zip && \
-    mv BaiduPCS-Go-3.6.8-linux-amd64/BaiduPCS-Go / && \
-    rmdir BaiduPCS-Go-3.6.8-linux-amd64/ && \
+    mv BaiduPCS-Go-*/BaiduPCS-Go / && \
+    rmdir BaiduPCS-Go-*/ && \
     rm pcs.zip
 
 VOLUME ["/root/.config/BaiduPCS-Go","/root/Downloads"]
